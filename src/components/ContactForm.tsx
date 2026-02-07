@@ -54,9 +54,9 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <SectionWrapper bg="dark" id="contact">
+      <SectionWrapper bg="warm" id="contact">
         <div className="py-20 text-center">
-          <p className="text-xl text-secondary">
+          <p className="text-xl text-primary">
             Message sent. We&apos;ll be in touch.
           </p>
         </div>
@@ -65,13 +65,13 @@ export default function ContactForm() {
   }
 
   return (
-    <SectionWrapper bg="dark" id="contact">
+    <SectionWrapper bg="warm" id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left — Intro */}
         <div className="lg:col-span-5">
           <SectionLabel text="Contact" />
 
-          <h2 className="mt-8 font-display text-2xl md:text-4xl font-normal text-secondary">
+          <h2 className="mt-6 font-sans text-2xl md:text-4xl font-bold text-primary">
             Let&apos;s connect.
           </h2>
 
@@ -99,6 +99,7 @@ export default function ContactForm() {
               type="text"
               required
               error={errors.name}
+              variant="warm"
             />
             <FormInput
               label="Email"
@@ -106,6 +107,7 @@ export default function ContactForm() {
               type="email"
               required
               error={errors.email}
+              variant="warm"
             />
             <FormInput
               label="Subject"
@@ -113,12 +115,14 @@ export default function ContactForm() {
               type="text"
               required
               error={errors.subject}
+              variant="warm"
             />
             <FormTextarea
               label="Message"
               name="message"
               required
               error={errors.message}
+              variant="warm"
             />
 
             {status === "error" && (
@@ -131,7 +135,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full text-xs uppercase tracking-[0.18em] font-semibold px-8 py-3.5 bg-accent text-secondary hover:bg-[#e7342b] transition-all hover:-translate-y-[1px] active:translate-y-0 disabled:opacity-60"
+                className="w-full text-xs uppercase tracking-[0.18em] font-semibold px-8 py-3.5 bg-accent text-secondary hover:bg-accent/90 transition-all hover:-translate-y-[1px] active:translate-y-0 disabled:opacity-60"
               >
                 {status === "submitting" ? "Sending..." : "Send Message"}
               </button>

@@ -33,7 +33,7 @@ export default function EmailSignup() {
       <div className="mx-auto max-w-[560px] text-center">
         <SectionLabel text="Stay in the Loop" />
 
-        <h2 className="mt-8 text-xl font-medium text-secondary">
+        <h2 className="mt-6 text-xl font-bold text-secondary">
           Get updates from the gallery.
         </h2>
 
@@ -63,12 +63,12 @@ export default function EmailSignup() {
                 name="email"
                 required
                 placeholder="Your email address"
-                className="flex-1 text-base text-secondary bg-[#0f0f0f] border border-neutral-800 px-4 py-3.5 placeholder:text-neutral-600 focus:border-accent focus:ring-1 focus:ring-offset-2 focus:ring-offset-primary focus:ring-accent outline-none"
+                className="flex-1 text-base text-secondary bg-neutral-900 border border-neutral-800 px-4 py-3.5 placeholder:text-neutral-600 focus:border-accent focus:ring-1 focus:ring-offset-2 focus:ring-offset-primary focus:ring-accent outline-none"
               />
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="text-xs uppercase tracking-[0.18em] font-semibold px-8 py-3.5 bg-accent text-secondary hover:bg-[#e7342b] transition-all disabled:opacity-60"
+                className="text-xs uppercase tracking-[0.18em] font-semibold px-8 py-3.5 bg-accent text-secondary hover:bg-accent/90 hover:-translate-y-[1px] active:translate-y-0 transition-all disabled:opacity-60"
               >
                 {status === "submitting" ? "..." : "Subscribe"}
               </button>

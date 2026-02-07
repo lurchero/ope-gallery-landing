@@ -25,7 +25,7 @@ const pillars = [
 
 export default function Pillars() {
   return (
-    <SectionWrapper bg="dark" id="gallery">
+    <SectionWrapper bg="dark">
       <SectionLabel text="What Happens Here" />
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">

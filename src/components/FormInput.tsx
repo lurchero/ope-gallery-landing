@@ -5,6 +5,7 @@ interface FormInputProps {
   required?: boolean;
   placeholder?: string;
   error?: string;
+  variant?: "dark" | "warm";
 }
 
 export default function FormInput({
@@ -14,7 +15,17 @@ export default function FormInput({
   required = false,
   placeholder,
   error,
+  variant = "dark",
 }: FormInputProps) {
+  const inputStyles =
+    variant === "warm"
+      ? `w-full text-base text-primary bg-secondary border ${
+          error ? "border-accent" : "border-neutral-200"
+        } px-4 py-3.5 placeholder:text-neutral-400 focus:border-accent focus:ring-1 focus:ring-offset-2 focus:ring-offset-neutral-100 focus:ring-accent outline-none`
+      : `w-full text-base text-secondary bg-neutral-900 border ${
+          error ? "border-accent" : "border-neutral-800"
+        } px-4 py-3.5 placeholder:text-neutral-600 focus:border-accent focus:ring-1 focus:ring-offset-2 focus:ring-offset-primary focus:ring-accent outline-none`;
+
   return (
     <div>
       <label
@@ -29,9 +40,7 @@ export default function FormInput({
         type={type}
         required={required}
         placeholder={placeholder}
-        className={`w-full text-base text-secondary bg-[#0f0f0f] border ${
-          error ? "border-accent" : "border-neutral-800"
-        } px-4 py-3.5 placeholder:text-neutral-600 focus:border-accent focus:ring-1 focus:ring-offset-2 focus:ring-offset-primary focus:ring-accent outline-none`}
+        className={inputStyles}
       />
       {error && <p className="mt-1 text-sm text-accent">{error}</p>}
     </div>

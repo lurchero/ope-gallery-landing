@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-neutral-800 pt-20 pb-12 px-5 md:px-6">
+    <footer className="bg-neutral-900 border-t border-neutral-800 pt-20 pb-12 px-5 md:px-6">
       <div className="mx-auto max-w-[1200px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-neutral-800">
           <p className="text-xs text-neutral-400">
-            &copy; 2025 OPE Gallery. All rights reserved.
+            &copy; {new Date().getFullYear()} OPE Gallery. All rights reserved.
           </p>
         </div>
       </div>

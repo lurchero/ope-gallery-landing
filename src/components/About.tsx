@@ -7,7 +7,7 @@ export default function About() {
       <div className="mx-auto max-w-[720px]">
         <SectionLabel text="About" />
 
-        <h2 className="mt-8 font-display text-2xl md:text-4xl font-normal text-secondary">
+        <h2 className="mt-6 font-sans text-2xl md:text-4xl font-bold text-secondary">
           A gallery without walls.
         </h2>
 

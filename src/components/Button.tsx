@@ -16,7 +16,7 @@ export default function Button({
   const shared =
     "text-xs uppercase tracking-[0.18em] font-semibold px-8 py-3.5 inline-flex items-center justify-center gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-accent";
   const filled =
-    "bg-accent text-secondary hover:bg-[#e7342b] hover:-translate-y-[1px] active:translate-y-0";
+    "bg-accent text-secondary hover:bg-accent/90 hover:-translate-y-[1px] active:translate-y-0";
   const ghost =
     "border border-neutral-700 text-secondary hover:border-accent hover:text-secondary hover:-translate-y-[1px] active:translate-y-0";
   const width = fullWidth ? "w-full" : "";

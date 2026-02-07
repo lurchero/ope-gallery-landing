@@ -4,7 +4,7 @@ interface SectionLabelProps {
 
 export default function SectionLabel({ text }: SectionLabelProps) {
   return (
-    <div className="mb-8">
+    <div className="mb-0">
       <div className="flex items-center gap-3">
         <span className="text-xs uppercase tracking-[0.18em] font-semibold text-neutral-400">
           {text}

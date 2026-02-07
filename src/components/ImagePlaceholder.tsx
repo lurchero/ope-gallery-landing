@@ -16,9 +16,11 @@ export default function ImagePlaceholder({
 
   return (
     <div
-      className={`w-full ${ratioClass} bg-neutral-800`}
+      className={`w-full ${ratioClass} bg-neutral-800 flex items-center justify-center`}
       role="img"
       aria-label={alt}
-    />
+    >
+      <div className="w-8 h-8 border border-dashed border-neutral-700 rounded-full" />
+    </div>
   );
 }
